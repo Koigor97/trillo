@@ -36,6 +36,11 @@ Grey dark 3: #999
     --border-bottom: 1px solid var(--grey-light-1);    
 }
 
+///// RESPONSIVE WIDTH VARIABLE USING SASS
+$bp-largest: 75em;    ///1200px
+$bp-large: 68.5%;     ///1100px
+$bp-tab-landscape: 67.81%;   ///1085
+$bp-tab-landscape2: 56.25%;
 
 * {
     margin: 0;
@@ -51,6 +56,10 @@ Grey dark 3: #999
 html {
     box-sizing: border-box;
     font-size: 62.5%; //1rem = 10px, 10px(which is what I want) / 16px(which is the browser default) = 62.5%
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
 }
 
 body {
